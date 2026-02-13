@@ -49,19 +49,19 @@ export const App = () => {
               }
             >
               <td>
-                {/* {(selectedGood === good || selectedGood === '') && ( */}
-                  <button
-                    onClick={() => {
-                      setSelectedGood(selectedGood === good ? '' : good);
-                    }}
-                    data-cy={`${selectedGood === good ? 'RemoveButton' : 'AddButton'}`}
-                    type="button"
-                    className={`${selectedGood === good ? 'button is-info' : 'button'}`}
-                  >
-                    {selectedGood === good ? '-' : '+'}
-                  </button>
-                {/* )
-                } */}
+                {(selectedGood === good || selectedGood === '') && (
+                <button
+                  onClick={() => {
+                    setSelectedGood(selectedGood === good ? '' : good);
+                  }}
+                  data-cy={`${selectedGood === good ? 'RemoveButton' : 'AddButton'}`}
+                  type="button"
+                  className={`${selectedGood === good ? 'button is-info' : 'button'}`}
+                >
+                  {selectedGood === good ? '-' : '+'}
+                </button>
+                )
+                }
               </td>
 
               <td data-cy="GoodTitle" className="is-vcentered">
